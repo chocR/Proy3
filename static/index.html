@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simulador de Planificación de Procesos (FCFS, SJF, SRTF, RR)</title>
+  <title>Simulador de Planificación de Procesos</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
     <h1>Simulador de Planificación de Procesos</h1>
-    <p>Algoritmos: FCFS, SJF (no expropiativo), SRTF (expropiativo), Round Robin (expropiativo)</p>
+    <p>Algoritmos: FCFS, SJF (no expropiativo), Round Robin (expropiativo)</p>
   </header>
 
   <section class="controls">
@@ -47,20 +47,20 @@
         <select id="algorithm">
           <option value="FCFS">FCFS</option>
           <option value="SJF">SJF (no expropiativo)</option>
-          <option value="SRTF">SRTF (expropiativo)</option>
           <option value="RR">Round Robin (expropiativo)</option>
         </select>
       </div>
       <div class="row">
-        <label>Quantum global (unidades) <small>(Solo RR, o por defecto si el proceso no define uno)</small></label>
+        <label>Quantum global (unidades) <small>(Solo RR)</small></label>
         <input type="number" id="global-quantum" min="1" step="1" value="2">
       </div>
       <div class="row">
         <label>Duración de 1 unidad (segundos)</label>
-        <input type="number" id="unit-seconds" min="1" step="1" value="5">
+        <input type="number" id="unit-seconds" min="1" step="1" value="3">
       </div>
       <div class="row">
         <button id="start-sim">Iniciar simulación</button>
+        <button id="stop-sim" class="secondary">Detener</button>
         <button id="demo-data" class="secondary">Cargar ejemplo</button>
       </div>
     </div>
@@ -71,11 +71,14 @@
       <h2>Cola de procesos / Línea de tiempo (Gantt)</h2>
       <div id="gantt"></div>
       <div id="metrics"></div>
+      <div id="efficiency"></div>
     </div>
+
     <div class="card">
       <h2>Historial de ejecución</h2>
       <div id="history"></div>
     </div>
+
     <div class="card">
       <h2>Cola preparada por unidad de tiempo</h2>
       <div id="ready-queues"></div>
@@ -83,7 +86,7 @@
   </section>
 
   <footer>
-    <p>Unidad de tiempo = <span id="unit-sec-label">5</span> s. PID se genera automáticamente.</p>
+    <p>Unidad de tiempo = <span id="unit-sec-label">3</span> s. PID se genera automáticamente.</p>
   </footer>
 
   <script src="./app.js"></script>
