@@ -1,4 +1,4 @@
-Simulador de Planificación de Procesos.
+Simulador de Planificación de Procesos
 
 Este proyecto es una aplicación web que simula la ejecución de procesos en un sistema operativo utilizando tres algoritmos clásicos de planificación de procesos: FCFS (First-Come, First-Served), SJF (Shortest Job First) y Round Robin. La simulación se visualiza en un gráfico de Gantt y proporciona métricas de rendimiento como el tiempo de espera, tiempo de respuesta y eficiencia.
 
@@ -135,4 +135,3 @@ Tiempo de vuelta (TAT): El tiempo total que un proceso pasa en el sistema, desde
 Tiempo de respuesta (RT): El tiempo que transcurre desde que un proceso llega al sistema hasta que comienza a ejecutarse.
 
 Eficiencia: Relación entre el tiempo de CPU utilizado por un proceso y su tiempo de vuelta.
-
