@@ -1,4 +1,5 @@
 Simulador de Planificación de Procesos
+
 Este proyecto es una aplicación web que simula la ejecución de procesos en un sistema operativo utilizando tres algoritmos clásicos de planificación de procesos: FCFS (First-Come, First-Served), SJF (Shortest Job First) y Round Robin. La simulación se visualiza en un gráfico de Gantt y proporciona métricas de rendimiento como el tiempo de espera, tiempo de respuesta y eficiencia.
 
 Características
